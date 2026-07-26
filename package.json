@@ -1,0 +1,13 @@
+{
+  "name": "factory-sos-pwa",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Simple factory SOS PWA with configurable email alerts",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.16"
+  }
+}

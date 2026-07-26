@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en"><head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#b91c1c"><link rel="manifest" href="/manifest.webmanifest"><link rel="stylesheet" href="/styles.css">
+  <title>Factory SOS</title>
+</head><body>
+  <main class="worker-screen" id="workerScreen">
+    <header><div class="brand">Factory SOS</div><button class="quiet-link" id="openAdmin">Manager settings</button></header>
+    <section class="help-card"><div class="pulse"><span>!</span></div><h1>Need help?</h1><p>Tap SOS to notify management.</p><button class="sos-button" id="openSos">SOS</button></section>
+    <p class="install-note">Install this app from your browser menu for quick access.</p>
+  </main>
+
+  <dialog id="sosDialog"><form method="dialog" id="sosForm"><button class="close" value="cancel" aria-label="Close">×</button><h2>Request assistance</h2>
+    <label>Problem type<select id="issue"><option>General assistance</option><option>Machine problem</option><option>IT / tablet problem</option><option>Quality issue</option><option>Urgent assistance</option></select></label>
+    <label>Worker name <input id="workerName" autocomplete="name" placeholder="Optional"></label>
+    <label>Line / location <input id="location" placeholder="Example: Sewing line 4"></label>
+    <label>Short note <textarea id="note" maxlength="500" placeholder="Optional"></textarea></label>
+    <button class="send-button" type="submit">Send SOS</button><p class="form-status" id="sosStatus"></p>
+  </form></dialog>
+
+  <dialog id="adminDialog"><section class="admin"><button class="close" id="closeAdmin" aria-label="Close">×</button><h2>Manager area</h2><div id="loginArea"><p>Sign in to change the notification email.</p><label>Password <input id="adminPassword" type="password"></label><button id="loginButton">Sign in</button><p class="form-status" id="loginStatus"></p></div>
+  <div id="settingsArea" hidden><form id="settingsForm"><h3>Manager notification emails</h3><p class="hint">An SOS email will be sent to every address filled in below. The first three are available for your managers; two additional addresses are available if needed.</p><label>Manager email 1 <input id="managerEmail1" type="email" required></label><label>Manager email 2 <input id="managerEmail2" type="email"></label><label>Manager email 3 <input id="managerEmail3" type="email"></label><label>Manager email 4 <input id="managerEmail4" type="email"></label><label>Manager email 5 <input id="managerEmail5" type="email"></label><h3>Email sending (SMTP)</h3><p class="hint">Use your company mail server or an email provider’s SMTP/app password.</p><label>SMTP server <input id="smtpHost" required placeholder="smtp.company.com"></label><label>SMTP port <input id="smtpPort" type="number" value="587" required></label><label class="checkbox"><input id="smtpSecure" type="checkbox"> Use secure connection (usually port 465)</label><label>SMTP username <input id="smtpUser" required type="email"></label><label>SMTP password <input id="smtpPassword" type="password" placeholder="Leave blank to keep existing password"></label><label>Sender name <input id="fromName" value="Factory SOS"></label><button>Save email settings</button></form><hr><h3>Recent requests</h3><div id="requests"></div><p class="form-status" id="settingsStatus"></p></div></section></dialog>
+  <script src="/app.js"></script>
+</body></html>

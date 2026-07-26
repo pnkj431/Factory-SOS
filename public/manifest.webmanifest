@@ -1,0 +1,9 @@
+{
+  "name": "Factory SOS",
+  "short_name": "Factory SOS",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#b91c1c",
+  "icons": [{ "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}
