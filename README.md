@@ -1,4 +1,4 @@
-# Factory SOS PWA
+# Factory SOS PWA 🏭
 
 A simple, free factory assistance system for worker tablets.
 
